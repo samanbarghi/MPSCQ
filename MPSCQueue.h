@@ -2,7 +2,7 @@
  * MPSCQueue.h
  *
  *  Created on: Mar 12, 2016
- *      Author: saman
+ *      Author: Saman Barghi
  */
 
 #ifndef MPSCQUEUE_H_
@@ -38,8 +38,9 @@ private:
 public:
     MPSCQueue(): tail(&stub),head(&stub){}
 
+    //Push a single element
     void push(T& elem){insert(elem, elem);}
-    //Accepting an intrusive list is a better idea?
+    //Push multiple elements in a form of a linked list, linked by next
     void push(T& first, T& last){insert(first, last);}
 
     // pop operates in chunk of elements and re-inserts stub after each chunk

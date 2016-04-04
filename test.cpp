@@ -1,8 +1,8 @@
 /*
- * main.cpp
+ * test.cpp
  *
  *  Created on: Mar 12, 2016
- *      Author: saman
+ *      Author: Saman Barghi
  */
 #include "MPSCQueue.h"
 #include <iostream>

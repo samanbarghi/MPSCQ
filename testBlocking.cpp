@@ -1,8 +1,8 @@
 /*
- * main.cpp
+ * testBlocking.cpp
  *
  *  Created on: Mar 12, 2016
- *      Author: saman
+ *      Author: Saman Barghi
  */
 #include "BlockingMPSCQ.h"
 #include "Semaphore.h"

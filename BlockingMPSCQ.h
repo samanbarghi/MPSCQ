@@ -1,8 +1,8 @@
 /*
- * MPSCQueue.h
+ * BlockingMPSCQ.h
  *
  *  Created on: Mar 12, 2016
- *      Author: saman
+ *      Author: Saman Barghi
  */
 
 #ifndef MPSCQUEUE_H_
@@ -41,8 +41,9 @@ private:
 public:
     BlockingMPSCQueue(): tail(&stub),head(&stub){}
 
+    //push a single element
     bool push(T& elem){return insert(elem, elem);}
-    //Accepting an intrusive list is a better idea?
+    //Push multiple elements in a form of a linked list, linked by next
     bool push(T& first, T& last){return insert(first, last);}
 
     // pop operates in chunk of elements and re-inserts stub after each chunk
