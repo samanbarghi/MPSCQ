@@ -147,7 +147,7 @@ public:
         void setState(T* s){ state = s;};
         T* getState(){return state;};
 
-    } __packed;
+    } __attribute__((__packed__));
 private:
     Node*   volatile    head;
     Node*               stub;
